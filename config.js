@@ -4,9 +4,25 @@ var CONFIG = {
       BASE_URL              : 'https://fourtytwowords.herokuapp.com/',
       RELATED               : '/relatedWords?api_key=',
       DEFINITIONS           : '/definitions?api_key=',
-      EXAMPLES              : '/examples?includeDuplicates=false&useCanonical=false&skip=0&limit=5&api_key=',
+      EXAMPLES              : '/examples?api_key=',
       RANDOM_WORD           : 'words/randomWord?api_key='
     },
+    COMMANDS          : {
+        DEFINITIONS  : 'def',
+        SYNONYMS     : 'syn',
+        ANTONYMS     : 'ant',
+        EXAMPLES     : 'ex',
+        DICTIONARY   : 'dict',
+        HELP         : '--help',
+        PLAY         : 'play'
+    }, 
+    MESSAGES : {
+        NO_DATA      : 'No Data',
+        HELP         : 'Available commands:\n\nFor definition:      ./dict def <word>'
+        + '\nFor synonyms:        ./dict syn <word>\nFor antonyms:        ./dic ant <word>'
+        + '\nFor examples:        ./dict ex <word>\nFor full dictionary: ./dict <word> or ./dict dict <word>'
+        + '\nFor word of the day dictionary:  ./dict\nFor word game:       ./dict play',
+    }
 };
 
 module.exports = CONFIG;
