@@ -4,11 +4,6 @@ spinner.setSpinnerString('|/-\\');
 let state = {
     GAME_MODE                 : false,
     cache : {},
-    WORD                      : null,
-    DEFINITIONS               : [],
-    SYNONYMS                  : [],
-    ANTONYMS                  : [],
-    EXAMPLES                  : [], 
     SPINNER                   : spinner
 }
 module.exports = state;

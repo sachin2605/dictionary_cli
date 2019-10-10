@@ -23,9 +23,9 @@ inp.on('line',async function (line) {
 
 inp.on('SIGINT', () => {
     
-    // inp.question('Leaving Dict? ', (ans) => {
-    //   if (ans.match(/^y(es)?$/i)) inp.pause();
-    // });
+    inp.question('Leaving Dict? ', (ans) => {
+      if (ans.match(/^y(es)?$/i)) inp.pause();
+    });
     inp.pause();
 });
 

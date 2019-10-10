@@ -4,7 +4,7 @@ const CONFIG = require('./config');
 async function Routes(data,state){
     if(!data) return;
 
-    // state.SPINNER.start();
+    state.SPINNER.start();
     data = data.split(' ');
     this._app       = (data[0]?data[0]: null);
     this._command   = (data[1]?data[1]: null);
@@ -28,7 +28,7 @@ async function Routes(data,state){
                 await COMMON_CONTROLLER.displayFullDictionary(this._word, state);
                 break;
             case CONFIG.COMMANDS.PLAY:
-                COMMON_CONTROLLER.initializeGame(this._gameState);
+                COMMON_CONTROLLER.playGame(state);
                 break;
             case CONFIG.COMMANDS.HELP:
                 COMMON_CONTROLLER.displayHelp();
@@ -38,9 +38,9 @@ async function Routes(data,state){
           }
 
     }else{
-
+        //routes for game mode.
     }
-    // state.SPINNER.stop();
+    state.SPINNER.stop();
 }
 
 module.exports = Routes;

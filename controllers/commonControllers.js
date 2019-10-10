@@ -117,6 +117,9 @@ const CONTROLLER = {
 
     displayHelp: function(){
         console.log(chalk.green(CONFIG.MESSAGES.HELP));
+    },
+    playGame : async function(){
+        console.log(chalk.cyan('OOPS, Functionality PeNding. Please get back to the developer'));
     }
 
 }
